@@ -1,0 +1,2 @@
+from .phone_characteristic import PhoneCharacteristic
+from .mobile_phone import MobilePhone

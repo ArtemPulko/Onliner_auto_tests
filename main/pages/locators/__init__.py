@@ -1,0 +1,4 @@
+from .in_compare_locators import CompareLocator
+from .catalog_locators import CatalogLocator
+from .main_page_locators import MainPageLocators
+from .phone_info_locators import PhoneInfoLocators
