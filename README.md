@@ -17,7 +17,7 @@
 ## Установка  
 Клонирование репозитория:  
 ```
-git clone https://github.com/ArtemPulko/test-task-part-1.git
+git clone https://github.com/ArtemPulko/Onliner_auto_tests.git
 ```
 Перед запуском тестов необходимо выполнить:  
 ```
