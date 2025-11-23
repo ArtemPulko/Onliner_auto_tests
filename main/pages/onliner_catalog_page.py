@@ -9,13 +9,13 @@ from ..pages import CatalogLocator as CL
 from selenium.webdriver import Keys
 from ..products import MobilePhone
 from .base_page import BasePage
-
 from decimal import Decimal
 import re
 
 class OnlinerCatalogPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
+        self._url = 'https://catalog.onliner.by/mobile'
 
     def phone_screen_resolution(self, phone_index: int) -> str:
         """
@@ -181,7 +181,7 @@ class OnlinerCatalogPage(BasePage):
       :return: True если элемент на странице отображается, иначе False
       """
       try:
-          WebDriverWait(self.driver, 10).until(EC.url_to_be("https://catalog.onliner.by/mobile"))
+          WebDriverWait(self.driver, 10).until(EC.url_to_be(self._url))
           WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(CL.catalog.value))
           return True
       except TimeoutException:
@@ -189,6 +189,6 @@ class OnlinerCatalogPage(BasePage):
 
     def load_all_phons(self):
         """Метод для загрузки телефонов в каталоге."""
-        #Onliner подгружает на страницу только первые шесть телефонов из-за этого другие некликабельны
+        #Onliner подгружает на страницу только первые шесть телефонов из-за этого другие не кликабельны
         #Поэтому листаю страницу до самого низа, чтобы они подгрузились в каталог
         self.driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.END)

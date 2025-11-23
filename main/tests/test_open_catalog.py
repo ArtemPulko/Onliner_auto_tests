@@ -11,7 +11,7 @@ def test_mobile_phone_btn(driver, authorization_cookies_path):
     :param authorization_cookies_path: Путь к кукам для авторизации
     """
     onliner_page = OnlinerPage(driver)
-    # Открываю онлайнер
+    # Открываю Onliner
     onliner_page.open(onliner_page.url)
     # Перехожу в каталог телефонов
     onliner_page.mobile_phone_catalog.click()
