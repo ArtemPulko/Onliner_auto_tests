@@ -25,7 +25,7 @@ pip install -r Onliner_auto_tests/requirements.txt
 ```
 На компьютере должен быть установлен Chrome и соответсвующий ему ChromeDriver.  
 Для установки драйвера необходимо:  
-1. Поместить файл с драйвером в модуль ```drivers```
+1. Поместить файл с драйвером в пакет ```drivers```
 2. В  ```__init__.py``` переменной ```driver_name``` писвоить имя файла необходимого драйвера   
 ```python
 def get_chromedriver_path(path):
