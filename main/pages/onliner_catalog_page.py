@@ -130,14 +130,6 @@ class OnlinerCatalogPage(BasePage):
         return self.find_by_xpath_clickable_elem(CL.xpath_link2.upgrade(phone_index))
 
     @property
-    def accept_city_btn(self) -> WebElement:
-        """
-        Свойство возвращающее кнопку для подтверждения города.
-        :return: WebElement кнопки подтверждения города.
-        """
-        return self.find_by_xpath_clickable_elem(CL.accept_city.value)
-
-    @property
     def comparison_link(self) -> WebElement:
         """
         Свойство возвращающее ссылку на сравнение выбранных телефонов.

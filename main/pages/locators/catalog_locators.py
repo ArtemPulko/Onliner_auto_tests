@@ -14,7 +14,6 @@ class CatalogLocator(enum.Enum):
     xpath_selected_phone = "(//label[@title='В сравнении'])[{PI}]"
     xpath_add_phone = "(//label[@title='К сравнению'])[{PI}]"
     # XPATH локаторы
-    accept_city = (By.XPATH,"//span[@class='button-style button-style_primary button-style_small-alter catalog-form__button']")
     comparison_link = (By.XPATH, "(//a[@class='catalog-interaction__sub catalog-interaction__sub_main'])[1]")
     offers = (By.XPATH, "//div[@class='catalog-form__offers catalog-form__offers_processing'][1]")
     catalog = (By.XPATH, "//div[@class='catalog-form']")
